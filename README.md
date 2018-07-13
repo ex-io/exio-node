@@ -6,7 +6,6 @@
 </h1>
 
 <h4 align="center">A minimal client library demonstrating API usage</h4>
-<br>
 
 <h4 align="left">
   <img src="https://travis-ci.org/ex-io/exio-node.svg?branch=master" />
