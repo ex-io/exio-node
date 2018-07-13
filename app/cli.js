@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const argv = require("yargs")
   .env("EX")
   .default("restApi", "https://api.sandbox.ex.io")

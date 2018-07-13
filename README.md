@@ -47,17 +47,13 @@ client.insertOrder("btc-usdt", "buy", "6000", "1", (err, data) => {
 
 ### CLI Usage
 
-This package comes bundled with a simple CLI app that you can use to run various operations. The CLI app is built on top of the library.
-
-First clone this repository to `/path/to/repo`, and then:
+This repository comes bundled with a simple CLI app that you can use to run various operations. The CLI app is built on top of the library.
 
 ```
-$ cd /path/to/repo
-$ npm install
-$ npm cli subscribe btc-usdt
+$ npx exio-node subscribe btc-usdt
 ```
 
-You should see public market data for `btc-usdt` logged to your console. You can run various other commands documented below. Detailed usage for each command is available via `npm cli <command> -h`
+You should see public market data for `btc-usdt` logged to your console. You can run various other commands documented below. Detailed usage for each command is available via `npx exio-node <command> -h`
 
 Certain commands require authentication. To use these commands, you can provide your authentication credentials as environment variables, e.g.:
 
@@ -66,13 +62,13 @@ $ export EX_API_KEY=<YOUR-API-KEY>
 $ export EX_API_SECRET=<YOUR-API-SECRET>
 $ export EX_API_PASSPHRASE=<YOUR-API-PASSPHRASE>
 
-$ npm cli subscribe btc-usdt
+$ npx exio-node subscribe btc-usdt
 ```
 
 You can also specify your credentials directly via command-line instead of through environment variables, e.g:
 
 ```
-$ yarn start --apiKey=<YOUR-API-KEY> --apiSecret=<YOUR-API-SECRET> --apiPassphrase=<YOUR-API-PASSPHRASE> subscribe btc-usdt
+$ npx exio-node --apiKey=<YOUR-API-KEY> --apiSecret=<YOUR-API-SECRET> --apiPassphrase=<YOUR-API-PASSPHRASE> subscribe btc-usdt
 ```
 
 > Note: To get an API credentials, you must login to ex.io and create one from with your user settings.
@@ -80,7 +76,7 @@ $ yarn start --apiKey=<YOUR-API-KEY> --apiSecret=<YOUR-API-SECRET> --apiPassphra
 The command-line utility defaults to using endpoints that are in the _sandbox_ environment, not production. Therefore, you should use API key, secret, and passphrases that were created from sandbox environment. If you want to use production endpoints, you can specificy them through the command-line:
 
 ```
-$ yarn start --restApi=https://api.ex.io --websocketApi=wss://feed.ex.io subscribe btc-usdt
+$ npx exio-node --restApi=https://api.ex.io --websocketApi=wss://feed.ex.io subscribe btc-usdt
 ```
 
 ### Subscribe
@@ -94,7 +90,7 @@ The insert command will insert an order into the exchange. This command requires
 Example (assumes you have your API key and secret already set):
 
 ```
-$ npm cli insert buy btc-usdt 4000 1
+$ npx exio-node insert buy btc-usdt 4000 1
 ```
 
 ### Cancel
@@ -104,5 +100,5 @@ This cancel command will cancel all open orders for a particular symbol, or a pa
 Example (assumes you have your API key and secret already set):
 
 ```
-$ npm cli cancel btc-usdt
+$ npx exio-node cancel btc-usdt
 ```
