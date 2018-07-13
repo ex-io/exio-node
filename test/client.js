@@ -19,14 +19,15 @@ describe("test client", () => {
     });
   });
 
-  it("receives unauthorized on insertOrder", done => {
-    const client = new Client({
-      restApi: "https://api.sandbox.ex.io",
-      key: "invalid",
-      secret: "invalid",
-      passphrase: "invalid"
-    });
+  const invalid = {
+    key: "invalid",
+    secret: "invalid",
+    passphrase: "invalid",
+    domain: "sandbox.ex.io"
+  };
 
+  it("receives unauthorized on insertOrder", done => {
+    const client = new Client(invalid);
     client.insertOrder("btc-usdt", "buy", "1.00", "1.00", (err, data) => {
       assert.exists(err);
       done();
@@ -34,13 +35,7 @@ describe("test client", () => {
   });
 
   it("receives unauthorized on cancelOrder", done => {
-    const client = new Client({
-      restApi: "https://api.sandbox.ex.io",
-      key: "invalid",
-      secret: "invalid",
-      passphrase: "invalid"
-    });
-
+    const client = new Client(invalid);
     client.cancelOrder("btc-usdt", 0, (err, data) => {
       assert.exists(err);
       done();
@@ -48,13 +43,7 @@ describe("test client", () => {
   });
 
   it("receives unauthorized on getFunds", done => {
-    const client = new Client({
-      restApi: "https://api.sandbox.ex.io",
-      key: "invalid",
-      secret: "invalid",
-      passphrase: "invalid"
-    });
-
+    const client = new Client(invalid);
     client.getFunds((err, data) => {
       assert.exists(err);
       done();
@@ -62,13 +51,7 @@ describe("test client", () => {
   });
 
   it("receives unauthorized on getOpen", done => {
-    const client = new Client({
-      restApi: "https://api.sandbox.ex.io",
-      key: "invalid",
-      secret: "invalid",
-      passphrase: "invalid"
-    });
-
+    const client = new Client(invalid);
     client.getOpen("btc-usdt", (err, data) => {
       assert.exists(err);
       done();
