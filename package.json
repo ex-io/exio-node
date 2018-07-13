@@ -4,9 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "nyc mocha --exit --recursive --timeout 30000 --reporter spec",
-    "test-travis":
-      "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
+    "test": "nyc mocha --exit --recursive --timeout 30000 --reporter spec"
   },
   "bin": {
     "exio-node": "./app/cli.js"
