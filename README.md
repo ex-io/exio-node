@@ -8,6 +8,10 @@
 <h4 align="center">A minimal client library demonstrating API usage</h4>
 <br>
 
+<h4 align="left">
+  <img src="https://travis-ci.org/ex-io/exio-node.svg?branch=master" />
+</h4>
+
 This project contains a minimal client library that wraps ex.io's API. In addition, it also contains a command-line utility that you can use to drive the client library.
 
 ### Library Usage
