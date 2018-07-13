@@ -18,16 +18,19 @@ In your node.js app, add `exio-node` as a dependency:
 $ npm install --save exio-node
 ```
 
+You can now import and instantiate a client object in your app.
+
 #### Example
 
 ```
 const Client = require("exio-node");
 
+// construct the client
 const client = new Client({
-  key: <YOUR-API-KEY>,
-  secret: <YOUR-API-SECRET>,
-  passphrase: <YOUR-API-PASSPHRASE>,
-  domain: "sandbox.ex.io", // use "ex.io" for production
+  key: <YOUR-API-KEY>,                  // provide your api key
+  secret: <YOUR-API-SECRET>,            // provide your api secret
+  passphrase: <YOUR-API-PASSPHRASE>,    // provide your api passphrase
+  domain: "sandbox.ex.io",              // use "ex.io" for production
 })
 
 // subscribe to orders channel
@@ -36,6 +39,7 @@ orders.on("message", (data) => {
   console.log(data);
 });
 
+// insert an order
 client.insertOrder("btc-usdt", "buy", "6000", "1", (err, data) => {
   console.log(err, data);
 });
