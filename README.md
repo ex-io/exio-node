@@ -25,7 +25,7 @@ You can now import and instantiate a client object in your app.
 
 #### Example
 
-```
+```javascript
 const Client = require("exio-node");
 
 // construct the client
