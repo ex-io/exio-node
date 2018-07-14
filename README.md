@@ -11,7 +11,7 @@
 [![Build Status](https://travis-ci.org/ex-io/exio-node.svg?branch=master)](https://travis-ci.org/ex-io/exio-node)
 [![Coverage Status](https://img.shields.io/coveralls/github/ex-io/exio-node/master.svg)](https://coveralls.io/github/ex-io/exio-node?branch=master)
 
-This project contains a minimal client library that wraps ex.io's API. In addition, it also contains a command-line utility that you can use to drive the client library.
+This project contains a minimal client library that wraps ex.io's API. In addition, it contains a command-line utility that you can use to drive the client library. This is intended to demonstrate basic API usage.
 
 ### Library Usage
 
@@ -33,8 +33,8 @@ const client = new Client({
   key: <YOUR-API-KEY>,                  // provide your api key
   secret: <YOUR-API-SECRET>,            // provide your api secret
   passphrase: <YOUR-API-PASSPHRASE>,    // provide your api passphrase
-  domain: "sandbox.ex.io",              // use "ex.io" for production
-})
+  domain: "sandbox.ex.io"               // use "ex.io" for production
+});
 
 // subscribe to orders and books channels for btc-usdt and eth-usdt
 const socket = client.subscribe(["orders", "books"], ["btc-usdt", "eth-usdt"]);
