@@ -5,7 +5,7 @@
   exio-node
 </h1>
 
-<h4 align="center">A minimal client library demonstrating API usage</h4>
+<h4 align="center">A minimal client library &amp; CLI demonstrating API usage</h4>
 <br>
 
 [![Build Status](https://travis-ci.org/ex-io/exio-node.svg?branch=master)](https://travis-ci.org/ex-io/exio-node)
@@ -88,9 +88,7 @@ The subscribe command will subscribe to the public `books` channel. If an API cr
 
 ### Insert
 
-The insert command will insert an order into the exchange. This command requires you to provide API credentials.
-
-Example:
+The insert command will insert an order into the exchange. This command requires API credentials.
 
 ```
 $ npx exio-node insert buy btc-usdt 4000 1
@@ -100,8 +98,22 @@ $ npx exio-node insert buy btc-usdt 4000 1
 
 This cancel command will cancel all open orders for a particular symbol, or a particular order if given an order-id to cancel. This command requires you to provide an API credentials.
 
-Example:
-
 ```
 $ npx exio-node cancel btc-usdt
+```
+
+### Open
+
+The open command will return all open orders you might have for a given symbol. This command requires API credentials.
+
+```
+$ npx exio-node open btc-usdt
+```
+
+### Funds
+
+The funds command will return your balance information for all currencies. This command requiers API credentials.
+
+```
+$ npx exio-node funds
 ```
