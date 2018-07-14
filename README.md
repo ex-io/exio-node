@@ -1,12 +1,11 @@
-<h1 align="center">
-  <br>
+<p align="center">
   <img src="https://s3.amazonaws.com/sandbox-exio-static/email/email-header.png" alt="ex.io">
   <br>
-  exio-node
-</h1>
-
-<h4 align="center">A minimal client library &amp; CLI demonstrating API usage</h4>
-<br>
+  <h1>exio-node</h1>
+</p>
+<p align="center">
+  <b>A minimal client library &amp; CLI demonstrating API usage</b>
+</p>
 
 [![Build Status](https://travis-ci.org/ex-io/exio-node.svg?branch=master)](https://travis-ci.org/ex-io/exio-node)
 [![Coverage Status](https://coveralls.io/repos/github/ex-io/exio-node/badge.svg?branch=master)](https://coveralls.io/github/ex-io/exio-node?branch=master)
