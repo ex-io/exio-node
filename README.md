@@ -11,6 +11,10 @@
 [![Build Status](https://travis-ci.org/ex-io/exio-node.svg?branch=master)](https://travis-ci.org/ex-io/exio-node)
 [![Coverage Status](https://coveralls.io/repos/github/ex-io/exio-node/badge.svg?branch=master)](https://coveralls.io/github/ex-io/exio-node?branch=master)
 
+<br>
+
+[![NPM](https://nodei.co/npm/exio-node.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/exio-node/)
+
 This project contains a minimal client library that wraps ex.io's API. In addition, it also contains a command-line utility that you can use to drive the client library.
 
 ### Library Usage
