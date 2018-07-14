@@ -37,8 +37,8 @@ const client = new Client({
 })
 
 // subscribe to orders and books channels for btc-usdt and eth-usdt
-const orders = client.subscribe(["orders", "books"], ["btc-usdt", "eth-usdt"]);
-orders.on("message", (data) => {
+const socket = client.subscribe(["orders", "books"], ["btc-usdt", "eth-usdt"]);
+socket.on("message", (data) => {
   console.log(data);
 });
 
