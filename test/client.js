@@ -12,7 +12,7 @@ describe("test client", () => {
       websocketApi: "wss://feed.sandbox.ex.io"
     });
 
-    const books = client.subscribe("btc-usdt", "books");
+    const books = client.subscribe("books", "btc-usdt");
     books.on("message", data => {
       books.close();
       done();

@@ -36,8 +36,8 @@ const client = new Client({
   domain: "sandbox.ex.io",              // use "ex.io" for production
 })
 
-// subscribe to orders channel
-const orders = client.subscribe("btc-usdt", "orders");
+// subscribe to orders and books channels for btc-usdt and eth-usdt
+const orders = client.subscribe(["orders", "books"], ["btc-usdt", "eth-usdt"]);
 orders.on("message", (data) => {
   console.log(data);
 });

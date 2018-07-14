@@ -11,15 +11,13 @@ exports.handler = argv => {
     websocketApi: argv.websocketApi
   });
 
-  const books = client.subscribe(argv.symbol, "books");
-  books.on("message", data => {
+  const channels = ["books"];
+  if (argv.apiKey && argv.apiSecret) {
+    channels.push("orders");
+  }
+
+  const stream = client.subscribe(channels, argv.symbol);
+  stream.on("message", data => {
     console.log(data);
   });
-
-  if (argv.apiKey && argv.apiSecret) {
-    const orders = client.subscribe(argv.symbol, "orders");
-    orders.on("message", data => {
-      console.log(data);
-    });
-  }
 };
