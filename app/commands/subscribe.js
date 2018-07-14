@@ -1,6 +1,6 @@
 const Client = require("../../lib");
 
-exports.command = "subscribe <symbol>";
+exports.command = "subscribe <symbol> [channels..]";
 exports.desc = "Subscribe to a given trading symbol";
 exports.handler = argv => {
   const client = new Client({
@@ -11,9 +11,12 @@ exports.handler = argv => {
     websocketApi: argv.websocketApi
   });
 
-  const channels = ["books"];
-  if (argv.apiKey && argv.apiSecret) {
-    channels.push("orders");
+  const channels = argv.channels;
+  if (!channels.length) {
+    channels.push("books");
+    if (argv.apiKey && argv.apiSecret && argv.apiPassphrase) {
+      channels.push("orders");
+    }
   }
 
   const stream = client.subscribe(channels, argv.symbol);
