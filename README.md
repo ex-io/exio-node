@@ -50,13 +50,13 @@ client.insertOrder("btc-usdt", "buy", "6000", "1", (err, data) => {
 
 ### CLI Usage
 
-This repository comes bundled with a simple CLI app that you can use to run various operations. The CLI app is built on top of the library.
+This repository comes bundled with a simple CLI app that you can use to run various operations. The CLI app is built on top of the library. You can execute the CLI remotely without downloading anything via `npx`:
 
 ```
 $ npx exio-node subscribe btc-usdt
 ```
 
-You should see public market data for `btc-usdt` logged to your console. You can run various other commands documented below. Detailed usage for each command is available via `npx exio-node <command> -h`
+After running that command, you should see public market data for `btc-usdt` logged to your console. You can run various other commands documented below. Detailed usage for each command is available via `npx exio-node <command> -h`
 
 Certain commands require authentication. To use these commands, you can provide your authentication credentials as environment variables, e.g.:
 
@@ -84,13 +84,13 @@ $ npx exio-node --restApi=https://api.ex.io --websocketApi=wss://feed.ex.io subs
 
 ### Subscribe
 
-The subscribe command will subscribe to the public `books` channel. If an API key and secret are available, it will also subscribe to the private `orders` channel.
+The subscribe command will subscribe to the public `books` channel. If an API credentials are available, it will also subscribe to the private `orders` channel.
 
 ### Insert
 
-The insert command will insert an order into the exchange. This command requires you to provide an API key and secret.
+The insert command will insert an order into the exchange. This command requires you to provide API credentials.
 
-Example (assumes you have your API key and secret already set):
+Example:
 
 ```
 $ npx exio-node insert buy btc-usdt 4000 1
@@ -98,9 +98,9 @@ $ npx exio-node insert buy btc-usdt 4000 1
 
 ### Cancel
 
-This cancel command will cancel all open orders for a particular symbol, or a particular order if given an order-id to cancel. This command requires you to provide an API key and secret.
+This cancel command will cancel all open orders for a particular symbol, or a particular order if given an order-id to cancel. This command requires you to provide an API credentials.
 
-Example (assumes you have your API key and secret already set):
+Example:
 
 ```
 $ npx exio-node cancel btc-usdt
