@@ -8,7 +8,8 @@
 <h4 align="center">A minimal client library demonstrating API usage</h4>
 
 <h4 align="left">
-  <img src="https://travis-ci.org/ex-io/exio-node.svg?branch=master" />
+  [![Build Status](https://travis-ci.org/ex-io/exio-node.svg?branch=master)](https://travis-ci.org/ex-io/exio-node)
+  [![Coverage Status](https://coveralls.io/repos/github/ex-io/exio-node/badge.svg?branch=master)](https://coveralls.io/github/ex-io/exio-node?branch=master)
 </h4>
 
 This project contains a minimal client library that wraps ex.io's API. In addition, it also contains a command-line utility that you can use to drive the client library.
