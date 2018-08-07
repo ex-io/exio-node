@@ -1,15 +1,15 @@
 {
   "name": "exio-node",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "test": "nyc mocha --exit --recursive --timeout 30000",
     "cover": "nyc report --reporter=text-lcov | coveralls"
   },
-  "repository" : { 
-     "type" : "git", 
-     "url" : "https://github.com/ex-io/exio-node.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ex-io/exio-node.git"
   },
   "bin": {
     "exio-node": "./app/cli.js"
