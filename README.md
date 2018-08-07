@@ -1,8 +1,5 @@
 <p align="center">
-  <img src="https://sandbox.ex.io/static/exio-transparent.png" height="60%" width="60%" alt="ex.io">
-</p>
-<p align="center">
-  <h1 align="center">exio-node</h1>
+  <img src="https://sandbox.ex.io/static/exio-transparent.png" height="30%" width="30%" alt="ex.io">
 </p>
 <p align="center">
   <b>A minimal client library &amp; CLI demonstrating API usage</b>
