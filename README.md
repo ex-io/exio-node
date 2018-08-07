@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://s3.amazonaws.com/sandbox-exio-static/email/email-header.png" alt="ex.io">
+  <img src="https://sandbox.ex.io/static/exio-transparent.png" height="60%" width="60%" alt="ex.io">
 </p>
 <p align="center">
   <h1 align="center">exio-node</h1>
