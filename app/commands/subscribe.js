@@ -23,4 +23,12 @@ exports.handler = argv => {
   stream.on("message", data => {
     console.log(data);
   });
+
+  stream.on("close", (err) => {
+    console.log("websocket closed ", err);
+  });
+
+  stream.on("error", err => {
+    console.log(err);
+  });
 };
